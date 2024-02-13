@@ -6,6 +6,7 @@ export default function HomePage(props: PageProps) {
   return (
     <main>
       <Hero />
+      <Services />
     </main>
   );
 }
