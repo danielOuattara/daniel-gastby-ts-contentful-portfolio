@@ -20,7 +20,7 @@ type TypeProjects = Array<{
 
 type TypeProjectsProp = {
   title: string;
-  showLinkToProjects: boolean;
+  showLinkToProjects?: boolean;
   projects: TypeProjects;
 };
 
