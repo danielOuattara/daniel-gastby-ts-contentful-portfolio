@@ -1,0 +1,100 @@
+{
+  "data": {
+    "allContentfulPortfolioProjects": {
+      "totalCount": 2,
+      "nodes": [
+        {
+          "id": "d1487b55-23a4-5583-8b4a-a3772228021e",
+          "title": "Simply Recipes 2",
+          "grade": "frontend",
+          "category": "web",
+          "level": "advanced",
+          "description": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus non enim praesent elementum facilisis leo vel. Elementum nisi quis eleifend quam. Tristique et egestas quis ipsum. Netus et malesuada fames ac turpis egestas maecenas pharetra convallis. Turpis in eu mi bibendum neque egestas congue quisque egestas. Vel fringilla est ullamcorper eget nulla facilisi etiam. Sed risus ultricies tristique nulla. Sed libero enim sed faucibus turpis in eu mi bibendum. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Imperdiet proin fermentum leo vel orci porta. Diam volutpat commodo sed egestas egestas. Aliquam malesuada bibendum arcu vitae. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Integer feugiat scelerisque varius morbi enim nunc. Sit amet consectetur adipiscing elit ut aliquam purus."
+          },
+          "url_website": "https://daniel-gatsby-simple-recipes.netlify.app",
+          "url_github": "https://github.com/danielOuattara/Gatsby_John_Smilga_Udemy/tree/master/B_SimplyRecipes_Project_Gatsby_5/12_simple_recipes_netlify_continuous_deployment",
+          "featured": true,
+          "featured_image": {
+            "id": "34e4b798-d329-5fe1-91c0-87c89db35f5e",
+            "gatsbyImageData": {
+              "images": {
+                "sources": [
+                  {
+                    "srcSet": "https://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=480&h=281&q=50&fm=webp 480w,\nhttps://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=960&h=562&q=50&fm=webp 960w,\nhttps://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=1920&h=1124&q=50&fm=webp 1920w",
+                    "sizes": "(min-width: 1920px) 1920px, 100vw",
+                    "type": "image/webp"
+                  }
+                ],
+                "fallback": {
+                  "src": "https://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=1920&h=1124&q=50&fm=png",
+                  "srcSet": "https://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=480&h=281&q=50&fm=png 480w,\nhttps://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=960&h=562&q=50&fm=png 960w,\nhttps://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=1920&h=1124&q=50&fm=png 1920w",
+                  "sizes": "(min-width: 1920px) 1920px, 100vw"
+                }
+              },
+              "layout": "constrained",
+              "width": 1920,
+              "height": 1124,
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAMAAABV0m3JAAABelBMVEX6+/zq6/nl5ujz9Pn09fj29/jm5vzNy/1ha29CTFBAR0lvcG9kX1x4ZEV2bWFXV1dka25cYmRBRUVcY2ZVXmIyPUIhLjM6QkVtbm1lXE9qY1szMS0xODguNjhDS01ER0hlbG9QV1o4Pj83PkBMUVJZUkxUNx0wJx5LLxsmLC1IT1I9QUFYYWVZWFVQS0VRUlBASEooMDIrJiNBLRsXDggaHh4/R0k5Pj/y8/T4+fq4ubmXjYWVjIS9t7Goi3fAj26ekoiJgHqrmIeVl4zu8PH5+vvFytGigVy3o4rKw8CQRxm5VheKbVp/TCmcZjlgV07v8fLu8PLn6evs7e7q6+zg3t3o5ePx8fHa29zj5OXm5+jOspandj+0jUnAraDBwbC5vKbX2dyvi16rej2Cb1rw8fLXwq25oW+4lXTHwLuyraayraPHyMq2mXuwlGp0oG7Z2tvT09XX2NnW19jV1tciIiImJiYlJSknJykoKCkkJCgjIyQlJSgkIyZcT4lEAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAB3RJTUUH5wkdCgsMjyN8nwAAAFBJREFUCNetzzkKgEAUBNGqwQWX1Ht6cUNBEfwmAwOOoR0+OikBVOUCOk+gAehVHVQLzpZtX8hfuE81wljj8nq6AkaSkEgRN9C0ufIitx3wAFViD1ogn4JdAAAAAElFTkSuQmCC"
+              }
+            }
+          },
+          "technologies": [
+            "react",
+            "gatsby",
+            "contentful cms",
+            "react icons",
+            "netlify"
+          ]
+        },
+        {
+          "id": "bfe711cf-2e24-5239-a11a-6bbfed280ae6",
+          "title": "Simply Recipes",
+          "grade": "frontenf",
+          "category": "web",
+          "level": "advanced",
+          "description": {
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus non enim praesent elementum facilisis leo vel. Elementum nisi quis eleifend quam. Tristique et egestas quis ipsum. Netus et malesuada fames ac turpis egestas maecenas pharetra convallis. Turpis in eu mi bibendum neque egestas congue quisque egestas. Vel fringilla est ullamcorper eget nulla facilisi etiam. Sed risus ultricies tristique nulla. Sed libero enim sed faucibus turpis in eu mi bibendum. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Imperdiet proin fermentum leo vel orci porta. Diam volutpat commodo sed egestas egestas. Aliquam malesuada bibendum arcu vitae. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Integer feugiat scelerisque varius morbi enim nunc. Sit amet consectetur adipiscing elit ut aliquam purus."
+          },
+          "url_website": "https://daniel-gatsby-simple-recipes.netlify.app",
+          "url_github": "https://github.com/danielOuattara/Gatsby_John_Smilga_Udemy/tree/master/B_SimplyRecipes_Project_Gatsby_5/12_simple_recipes_netlify_continuous_deployment",
+          "featured": true,
+          "featured_image": {
+            "id": "34e4b798-d329-5fe1-91c0-87c89db35f5e",
+            "gatsbyImageData": {
+              "images": {
+                "sources": [
+                  {
+                    "srcSet": "https://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=480&h=281&q=50&fm=webp 480w,\nhttps://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=960&h=562&q=50&fm=webp 960w,\nhttps://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=1920&h=1124&q=50&fm=webp 1920w",
+                    "sizes": "(min-width: 1920px) 1920px, 100vw",
+                    "type": "image/webp"
+                  }
+                ],
+                "fallback": {
+                  "src": "https://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=1920&h=1124&q=50&fm=png",
+                  "srcSet": "https://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=480&h=281&q=50&fm=png 480w,\nhttps://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=960&h=562&q=50&fm=png 960w,\nhttps://images.ctfassets.net/jqhl93v1jzqo/mnlKoZUN3SY4FapA5s7yK/ecc9e97b3e81be486c4d349ee16c73db/simple_recipes_featured.png?w=1920&h=1124&q=50&fm=png 1920w",
+                  "sizes": "(min-width: 1920px) 1920px, 100vw"
+                }
+              },
+              "layout": "constrained",
+              "width": 1920,
+              "height": 1124,
+              "placeholder": {
+                "fallback": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAMAAABV0m3JAAABelBMVEX6+/zq6/nl5ujz9Pn09fj29/jm5vzNy/1ha29CTFBAR0lvcG9kX1x4ZEV2bWFXV1dka25cYmRBRUVcY2ZVXmIyPUIhLjM6QkVtbm1lXE9qY1szMS0xODguNjhDS01ER0hlbG9QV1o4Pj83PkBMUVJZUkxUNx0wJx5LLxsmLC1IT1I9QUFYYWVZWFVQS0VRUlBASEooMDIrJiNBLRsXDggaHh4/R0k5Pj/y8/T4+fq4ubmXjYWVjIS9t7Goi3fAj26ekoiJgHqrmIeVl4zu8PH5+vvFytGigVy3o4rKw8CQRxm5VheKbVp/TCmcZjlgV07v8fLu8PLn6evs7e7q6+zg3t3o5ePx8fHa29zj5OXm5+jOspandj+0jUnAraDBwbC5vKbX2dyvi16rej2Cb1rw8fLXwq25oW+4lXTHwLuyraayraPHyMq2mXuwlGp0oG7Z2tvT09XX2NnW19jV1tciIiImJiYlJSknJykoKCkkJCgjIyQlJSgkIyZcT4lEAAAACXBIWXMAABcRAAAXEQHKJvM/AAAAB3RJTUUH5wkdCgsMjyN8nwAAAFBJREFUCNetzzkKgEAUBNGqwQWX1Ht6cUNBEfwmAwOOoR0+OikBVOUCOk+gAehVHVQLzpZtX8hfuE81wljj8nq6AkaSkEgRN9C0ufIitx3wAFViD1ogn4JdAAAAAElFTkSuQmCC"
+              }
+            }
+          },
+          "technologies": [
+            "react",
+            "gatsby",
+            "contentful cms",
+            "react icons",
+            "netlify"
+          ]
+        }
+      ]
+    }
+  },
+  "extensions": {}
+}

@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 
-export default function IndexPage() {
+export default function HomePage(props: PageProps) {
   return (
     <main>
       <h1>Home page</h1>
