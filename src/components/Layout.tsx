@@ -5,7 +5,7 @@ import "../assets/css/main.css";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <h2>Layout</h2>
+      <Navbar />
       {children}
     </>
   );
