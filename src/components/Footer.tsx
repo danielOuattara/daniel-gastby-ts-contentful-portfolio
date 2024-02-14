@@ -22,7 +22,7 @@ export default function Footer() {
           copyright &copy; 2019 - {new Date().getFullYear()}{" "}
           <span>Web & Mobile </span> all right reserved
         </h4>
-        <p>Powered using Gatsby5+, Typescript, Contentful</p>
+        <p>Powered using : Gatsby5 & Typescript & Contentful</p>
         <p>
           <a href="#" target="_blank" rel="noreferrer">
             Github Source
