@@ -1091,11 +1091,17 @@ Footer
   place-items: center;
 }
 
-.footer h4 {
+.footer h4,
+p,
+a {
   margin-top: 0.5rem;
   color: var(--clr-white);
   font-weight: normal;
   text-transform: uppercase;
+}
+
+.footer p {
+  text-transform: none;
 }
 
 .footer h4 span {
@@ -1112,6 +1118,11 @@ Footer
 
 .footer .social-link:hover {
   color: var(--clr-primary-5);
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
 }
 
 /*
