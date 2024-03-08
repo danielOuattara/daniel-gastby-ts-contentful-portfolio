@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, PageProps, graphql } from "gatsby";
-import { Seo } from "./../components";
+import { Seo } from "../components";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 //-------------------------------------------------------------------------------
@@ -9,7 +9,7 @@ export const query = graphql`
     contentfulPortfolioProjects(title: { eq: $title }) {
       id
       title
-      type
+      category
       level
       description {
         description
@@ -36,7 +36,7 @@ type TypeSingleProjectQuery = {
   contentfulPortfolioProjects: {
     id: string;
     title: string;
-    type: string;
+    category: string;
     level: string;
     url_website: string;
     url_github: string;
@@ -60,12 +60,11 @@ type TypePageContext = {
   title: string;
 };
 
-export default function SingleProjectTemplate({
+export default function pageTemplateSingleProject({
   data,
   pageContext,
 }: PageProps<TypeSingleProjectQuery, TypePageContext>) {
   const project = data.contentfulPortfolioProjects;
-  console.log("project = ", project);
 
   return (
     <main className="project-template-page">
