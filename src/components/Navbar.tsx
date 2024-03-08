@@ -38,11 +38,7 @@ export default function Navbar(props: TypeNavbar) {
   };
 
   return (
-    <nav
-      className="navbar"
-      onMouseOver={(event) => hideSubMenu(event)}
-      style={{ border: "1px solid red" }}
-    >
+    <nav className="navbar" onMouseOver={(event) => hideSubMenu(event)}>
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
