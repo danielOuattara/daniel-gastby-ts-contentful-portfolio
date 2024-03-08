@@ -1,5 +1,3 @@
-// pageTemplateByProjectType.tsx file
-
 import * as React from "react";
 import { graphql, PageProps } from "gatsby";
 import { Projects, Seo } from "../components";
@@ -7,12 +5,12 @@ import { IGatsbyImageData } from "gatsby-plugin-image";
 
 //-------------------------------------------------------------------------------
 export const query = graphql`
-  query AllProjectsByType($type: String) {
-    allContentfulPortfolioProjects(filter: { type: { eq: $type } }) {
+  query AllProjectsByType($category: String) {
+    allContentfulPortfolioProjects(filter: { category: { eq: $category } }) {
       nodes {
         id
         title
-        type
+        category
         level
         description {
           description
@@ -36,7 +34,7 @@ type AllProjectsByTypeQuery = {
     nodes: Array<{
       id: string;
       title: string;
-      type: string;
+      category: string;
       level: string;
       url_website: string;
       url_github: string;
@@ -53,17 +51,21 @@ type AllProjectsByTypeQuery = {
 };
 
 type TypePageContext = {
-  type: string;
+  category: string;
 };
 
-export default function PageTemplateByProjectType({
+export default function pageTemplateProjectsByCategory({
   data,
+  pageContext,
 }: PageProps<AllProjectsByTypeQuery, TypePageContext>) {
   const projects = data.allContentfulPortfolioProjects.nodes;
   return (
     <main>
       <section className="projects-page">
-        <Projects title="backend projects" projects={projects} />
+        <Projects
+          title={`${pageContext.category} projects`}
+          projects={projects}
+        />
       </section>
     </main>
   );
