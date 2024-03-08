@@ -6,7 +6,7 @@ import { IGatsbyImageData } from "gatsby-plugin-image";
 type TypeProjects = Array<{
   id: string;
   title: string;
-  type: string;
+  category: string;
   level: string;
   url_website: string;
   url_github: string;

@@ -6,11 +6,12 @@ import { BsBoxArrowInUpRight } from "react-icons/bs";
 import { Link } from "gatsby";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 import slugify from "slugify";
+import { slugger } from "../utilities/slugger";
 
 type TypeSingleProject = {
   id: string;
   title: string;
-  type: string;
+  category: string;
   level: string;
   url_website: string;
   url_github: string;
@@ -40,10 +41,9 @@ export default function Project({ index, project }: TypeSingleProjectProps) {
 
       <div className="project-info">
         <Link
-          to={`/projects/${project.type}/${slugify(project.title, {
-            lower: true,
-            trim: true,
-          })}`}
+          to={`/projects/${slugger(project.category)}/${slugger(
+            project.title,
+          )}`}
           className="project-slug"
         >
           <h3>
