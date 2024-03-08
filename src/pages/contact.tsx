@@ -1,11 +1,11 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import type { HeadFC } from "gatsby";
 
-export default function ContactPage(props: PageProps) {
+export default function ContactPage() {
   return (
     <section className="contact-page">
       <article className="contact-form">
-        <h3>stay in touch ? (Not Set Yet)</h3>
+        <h3>stay in touch ?</h3>
         <form
           className="form contact-form"
           action="https://formspree.io/f/mdorpabo"
