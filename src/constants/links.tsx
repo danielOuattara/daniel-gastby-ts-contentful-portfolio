@@ -38,7 +38,7 @@ const page_links = [
   },
 ];
 
-const documents_sublinks = [
+const documents_subLinks = [
   {
     id: 6,
     text: "cv",
@@ -55,4 +55,4 @@ const documents_sublinks = [
     url: "/diploma/",
   },
 ];
-export { page_links, documents_sublinks };
+export { page_links, documents_subLinks };
