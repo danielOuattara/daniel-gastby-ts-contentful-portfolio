@@ -1,6 +1,6 @@
 import { GatsbyNode, PageProps } from "gatsby";
 import path from "path";
-import slugify from "slugify";
+import { slugger } from "./src/utilities/slugger";
 //--------------------------------------------------------------
 
 type TypeGatsbyNodeQuery = {
@@ -10,7 +10,7 @@ type TypeGatsbyNodeQuery = {
   allProjectsTitles: {
     nodes: Array<{
       title: string;
-      type: string;
+      category: string;
     }>;
   };
 };
@@ -22,13 +22,13 @@ export const createPages: GatsbyNode["createPages"] = async ({
   const { data, errors } = await graphql<TypeGatsbyNodeQuery>(`
     query GatsbyNode {
       distinctProjectTypeList: allContentfulPortfolioProjects {
-        distinct(field: { type: SELECT })
+        distinct(field: { category: SELECT })
       }
 
       allProjectsTitles: allContentfulPortfolioProjects {
         nodes {
           title
-          type
+          category
         }
       }
     }
@@ -38,25 +38,24 @@ export const createPages: GatsbyNode["createPages"] = async ({
     throw new Error(errors.join(", "));
   }
 
-  console.log("data = ", data);
-
   if (data) {
-    data.distinctProjectTypeList.distinct.forEach((type) => {
+    data.distinctProjectTypeList.distinct.forEach((category) => {
       return actions.createPage({
-        path: "/projects/" + type,
+        path: "/projects/" + slugger(category),
         component: path.resolve(
-          "./src/templates/pageTemplateByProjectType.tsx",
+          "./src/templates/pageTemplateProjectsByCategory.tsx",
         ),
-        context: { type },
+        context: { category },
       });
     });
     data.allProjectsTitles.nodes.forEach((project) => {
       return actions.createPage({
-        path: `/projects/${project.type}/${slugify(project.title, {
-          lower: true,
-          trim: true,
-        })}`,
-        component: path.resolve("./src/templates/singleProjectTemplate.tsx"),
+        path: `/projects/${slugger(project.category)}/${slugger(
+          project.title,
+        )}`,
+        component: path.resolve(
+          "./src/templates/pageTemplateSingleProject.tsx",
+        ),
         context: { title: project.title },
       });
     });
