@@ -9,7 +9,7 @@ export const query = graphql`
       nodes {
         id
         title
-        type
+        category
         level
         description {
           description
@@ -32,7 +32,7 @@ type TypeFeaturedProjectsQuery = {
     nodes: Array<{
       id: string;
       title: string;
-      type: string;
+      category: string;
       level: string;
       url_website: string;
       url_github: string;
