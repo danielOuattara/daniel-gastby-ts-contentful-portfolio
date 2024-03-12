@@ -4,6 +4,27 @@ import { Projects, Seo } from "../components";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 //-------------------------------------------------------------------------------
+type AllProjectsByTypeQuery = {
+  allContentfulPortfolioProjects: {
+    nodes: Array<{
+      id: string;
+      title: string;
+      category: string;
+      level: string;
+      url_website: string;
+      url_github: string;
+      featured: boolean;
+      technologies: Array<string>;
+      description: { description: string };
+      featured_image: {
+        id: string;
+        gatsbyImageData: IGatsbyImageData;
+        publicUrl: string;
+      };
+    }>;
+  };
+};
+
 export const query = graphql`
   query AllProjectsByType($category: String) {
     allContentfulPortfolioProjects(filter: { category: { eq: $category } }) {
@@ -29,27 +50,6 @@ export const query = graphql`
   }
 `;
 
-type AllProjectsByTypeQuery = {
-  allContentfulPortfolioProjects: {
-    nodes: Array<{
-      id: string;
-      title: string;
-      category: string;
-      level: string;
-      url_website: string;
-      url_github: string;
-      featured: boolean;
-      technologies: Array<string>;
-      description: { description: string };
-      featured_image: {
-        id: string;
-        gatsbyImageData: IGatsbyImageData;
-        publicUrl: string;
-      };
-    }>;
-  };
-};
-
 type TypePageContext = {
   category: string;
 };
@@ -71,4 +71,15 @@ export default function pageTemplateProjectsByCategory({
   );
 }
 
-// export const Head = () => <Seo title={"Backend Projects"} />;
+export const Head = ({
+  pageContext,
+}: PageProps<AllProjectsByTypeQuery, TypePageContext>) => {
+  const category = pageContext.category;
+  return (
+    <Seo
+      title={`${category.charAt(0).toUpperCase() + category.slice(1)} Projects`}
+      // description={project.description.description}
+      image={`/${category}.png`}
+    />
+  );
+};

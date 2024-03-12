@@ -80,13 +80,16 @@ export default function pageTemplateSingleProject({
   );
 }
 
-// export const Head = (props) => {
-//   const project = props.data.contentfulPortfolioProjects;
-//   return (
-//     <Seo
-//       title={project.title}
-//       description={project.description.description}
-//       image={project.featured_image.publicUrl}
-//     />
-//   );
-// };
+export const Head = ({
+  data,
+  pageContext,
+}: PageProps<TypeSingleProjectQuery, TypePageContext>) => {
+  const project = data.contentfulPortfolioProjects;
+  return (
+    <Seo
+      title={project.title}
+      description={project.description.description}
+      image={project.featured_image.publicUrl}
+    />
+  );
+};
