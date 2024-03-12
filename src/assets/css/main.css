@@ -1092,8 +1092,8 @@ Footer
 }
 
 .footer h4,
-p,
-a {
+.footer p,
+.footer a {
   margin-top: 0.5rem;
   color: var(--clr-white);
   font-weight: normal;
