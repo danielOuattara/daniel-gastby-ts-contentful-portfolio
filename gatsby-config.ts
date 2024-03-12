@@ -5,13 +5,10 @@ dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    // title: `daniel-gastby-ts-contentful-portfolio`,
     title: "Fullstack Portfolio",
-    // siteUrl: `https://www.yourdomain.tld`,
-    siteUrl: "https://daniel-gatsby-portfolio.netlify.app",
+    siteUrl: "https://daniel-portfolio-gatsby-ts-contentful.netlify.app",
     description:
       "Portfolio Gatsby & Contentful powered website where I present myself and show my skills on different kind of projects and using a wide range of effective web design technologies.",
-    titleTemplate: `%s | Fullstack Portfolio `,
     image: "/homeImage.png",
     linkedInUsername: "daniel-b-ouattara-677146ab",
     twitterUsername: "@danielOuattara",
