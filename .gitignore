@@ -2,7 +2,8 @@ node_modules/
 .cache/
 public
 src/gatsby-types.d.ts
-
+test.tsx
+test2.tsx
 
 # Logs
 logs
