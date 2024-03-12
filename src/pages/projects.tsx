@@ -70,4 +70,4 @@ export default function ProjectsPage({
   );
 }
 
-export const Head = () => <title>Projects Page</title>;
+export const Head = () => <Seo title={"Projects"} image="/all-projects.png" />;

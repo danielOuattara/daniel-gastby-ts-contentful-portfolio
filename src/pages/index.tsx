@@ -1,5 +1,5 @@
 import * as React from "react";
-import { type HeadFC, type PageProps, graphql } from "gatsby";
+import { type PageProps, graphql } from "gatsby";
 import { Hero, Services, Projects, Seo } from "../components";
 
 export const query = graphql`
@@ -63,4 +63,4 @@ export default function HomePage({
   );
 }
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head = () => <Seo title={"Home"} image="/home.png" />;

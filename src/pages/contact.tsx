@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { HeadFC } from "gatsby";
+import { Seo } from "../components";
 
 export default function ContactPage() {
   return (
@@ -49,4 +49,4 @@ export default function ContactPage() {
   );
 }
 
-export const Head: HeadFC = () => <title>Contact Page</title>;
+export const Head = () => <Seo title={"Contacts"} image="/contact.png" />;

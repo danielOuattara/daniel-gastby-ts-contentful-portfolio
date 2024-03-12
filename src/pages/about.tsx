@@ -1,7 +1,8 @@
 import * as React from "react";
-import { graphql, type HeadFC, type PageProps } from "gatsby";
+import { graphql, type PageProps } from "gatsby";
 import image from "./../assets/images/hero2.svg";
 import { Title, Seo } from "../components";
+import { TypeAboutMeQuery } from "../custom-types";
 // import { StaticImage } from "gatsby-plugin-image";
 
 export const query = graphql`
@@ -45,4 +46,4 @@ export default function AboutPage({ data }: PageProps<TypeAboutMeQuery>) {
   );
 }
 
-export const Head: HeadFC = () => <title>About Page</title>;
+export const Head = () => <Seo title={"About"} image="/about.png" />;
