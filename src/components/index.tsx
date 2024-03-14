@@ -1,3 +1,5 @@
+import Document from "./Document";
+import Documents from "./Documents";
 import Footer from "./Footer";
 import Hero from "./Hero";
 // import Jobs from "./Jobs";
@@ -12,6 +14,8 @@ import Submenu from "./Submenu";
 import Title from "./Title";
 
 export {
+  Document,
+  Documents,
   Footer,
   Hero,
   // Jobs,
