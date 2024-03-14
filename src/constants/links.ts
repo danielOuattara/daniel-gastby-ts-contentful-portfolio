@@ -25,9 +25,9 @@ const page_links = [
     url: "/documents",
     page: "documents",
     subLinks: [
-      { id: "4-1", url: "/documents/certificates", page: "certificates" },
-      { id: "4-2", url: "/documents/cv", page: "curriculum" },
-      { id: "4-3", url: "/documents/diploma", page: "diploma" },
+      { id: "4-1", url: "/documents/curriculum", page: "curriculum" },
+      { id: "4-2", url: "/documents/certificates", page: "certificates" },
+      { id: "4-3", url: "/documents/diplomas", page: "diplomas" },
       { id: "4-4", url: "/documents/packages", page: "packages" },
     ],
   },
@@ -38,21 +38,21 @@ const page_links = [
   },
 ];
 
-const documents_subLinks = [
-  {
-    id: 6,
-    text: "cv",
-    url: "/cv/",
-  },
-  {
-    id: 7,
-    text: "certifications",
-    url: "/certifications/",
-  },
-  {
-    id: 7,
-    text: "diploma",
-    url: "/diploma/",
-  },
-];
-export { page_links, documents_subLinks };
+// const documents_subLinks = [
+//   {
+//     id: 6,
+//     text: "cv",
+//     url: "/cv/",
+//   },
+//   {
+//     id: 7,
+//     text: "certifications",
+//     url: "/certifications/",
+//   },
+//   {
+//     id: 7,
+//     text: "diploma",
+//     url: "/diploma/",
+//   },
+// ];
+export default page_links;
