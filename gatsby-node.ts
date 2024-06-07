@@ -1,10 +1,12 @@
+/* gatsby-node.ts */
+
 import { GatsbyNode, PageProps } from "gatsby";
 import path from "path";
 import { slugger } from "./src/utilities/slugger";
 //--------------------------------------------------------------
 
 type TypeGatsbyNodeQuery = {
-  distinctProjectTypeList: {
+  distinctProjectsTypeList: {
     distinct: Array<string>;
   };
   allProjectsTitles: {
@@ -12,6 +14,9 @@ type TypeGatsbyNodeQuery = {
       title: string;
       category: string;
     }>;
+  };
+  distinctDocumentsTypeList: {
+    distinct: Array<string>;
   };
 };
 
@@ -21,7 +26,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 }) => {
   const { data, errors } = await graphql<TypeGatsbyNodeQuery>(`
     query GatsbyNode {
-      distinctProjectTypeList: allContentfulPortfolioProjects {
+      distinctProjectsTypeList: allContentfulPortfolioProjects {
         distinct(field: { category: SELECT })
       }
 
@@ -31,6 +36,10 @@ export const createPages: GatsbyNode["createPages"] = async ({
           category
         }
       }
+
+      distinctDocumentsTypeList: allContentfulPortfolioDocuments {
+        distinct(field: { category: SELECT })
+      }
     }
   `);
 
@@ -39,7 +48,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
   }
 
   if (data) {
-    data.distinctProjectTypeList.distinct.forEach((category) => {
+    data.distinctProjectsTypeList.distinct.forEach((category) => {
       return actions.createPage({
         path: "/projects/" + slugger(category),
         component: path.resolve(
@@ -57,6 +66,16 @@ export const createPages: GatsbyNode["createPages"] = async ({
           "./src/templates/pageTemplateSingleProject.tsx",
         ),
         context: { title: project.title },
+      });
+    });
+
+    data.distinctDocumentsTypeList.distinct.forEach((category) => {
+      return actions.createPage({
+        path: "/documents/" + slugger(category) + "s",
+        component: path.resolve(
+          "./src/templates/pageTemplateDocumentsByCategory.tsx",
+        ),
+        context: { category },
       });
     });
   }
