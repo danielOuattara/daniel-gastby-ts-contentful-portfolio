@@ -18,7 +18,7 @@ type TypeProjects = Array<{
   };
 }>;
 
-type TypeProjectsProp = {
+type TypeProjectsProps = {
   title: string;
   showLinkToProjects?: boolean;
   projects: TypeProjects;
@@ -28,7 +28,7 @@ export default function Projects({
   title,
   projects,
   showLinkToProjects,
-}: TypeProjectsProp) {
+}: TypeProjectsProps) {
   return (
     <section className="section projects">
       <Title title={title} />
