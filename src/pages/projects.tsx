@@ -3,6 +3,31 @@ import { PageProps, graphql } from "gatsby";
 import { Projects, Seo } from "./../components";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
+type TypeAllProjectsQuery = {
+  allContentfulPortfolioProjects: {
+    totalCount: number;
+    nodes: Array<{
+      id: string;
+      title: string;
+      category: string;
+      level: string;
+      url_website: string;
+      url_github: string;
+      featured: boolean;
+      technologies: Array<string>;
+      description: { description: string };
+      featured_image: {
+        id: string;
+        gatsbyImageData: IGatsbyImageData;
+      };
+      images_list: Array<{
+        gatsbyImageData: IGatsbyImageData;
+        id: string;
+      }>;
+    }>;
+  };
+};
+
 export const query = graphql`
   query AllProjects {
     allContentfulPortfolioProjects {
@@ -31,31 +56,6 @@ export const query = graphql`
     }
   }
 `;
-
-type TypeAllProjectsQuery = {
-  allContentfulPortfolioProjects: {
-    totalCount: number;
-    nodes: Array<{
-      id: string;
-      title: string;
-      category: string;
-      level: string;
-      url_website: string;
-      url_github: string;
-      featured: boolean;
-      technologies: Array<string>;
-      description: { description: string };
-      featured_image: {
-        id: string;
-        gatsbyImageData: IGatsbyImageData;
-      };
-      images_list: Array<{
-        gatsbyImageData: IGatsbyImageData;
-        id: string;
-      }>;
-    }>;
-  };
-};
 
 export default function ProjectsPage({
   data,

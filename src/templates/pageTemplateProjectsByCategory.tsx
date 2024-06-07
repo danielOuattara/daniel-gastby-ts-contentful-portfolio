@@ -4,26 +4,6 @@ import { Projects, Seo } from "../components";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 //-------------------------------------------------------------------------------
-type AllProjectsByTypeQuery = {
-  allContentfulPortfolioProjects: {
-    nodes: Array<{
-      id: string;
-      title: string;
-      category: string;
-      level: string;
-      url_website: string;
-      url_github: string;
-      featured: boolean;
-      technologies: Array<string>;
-      description: { description: string };
-      featured_image: {
-        id: string;
-        gatsbyImageData: IGatsbyImageData;
-        publicUrl: string;
-      };
-    }>;
-  };
-};
 
 export const query = graphql`
   query AllProjectsByType($category: String) {
@@ -50,11 +30,32 @@ export const query = graphql`
   }
 `;
 
+type AllProjectsByTypeQuery = {
+  allContentfulPortfolioProjects: {
+    nodes: Array<{
+      id: string;
+      title: string;
+      category: string;
+      level: string;
+      url_website: string;
+      url_github: string;
+      featured: boolean;
+      technologies: Array<string>;
+      description: { description: string };
+      featured_image: {
+        id: string;
+        gatsbyImageData: IGatsbyImageData;
+        publicUrl: string;
+      };
+    }>;
+  };
+};
+
 type TypePageContext = {
   category: string;
 };
 
-export default function pageTemplateProjectsByCategory({
+export default function PageTemplateProjectsByCategory({
   data,
   pageContext,
 }: PageProps<AllProjectsByTypeQuery, TypePageContext>) {
