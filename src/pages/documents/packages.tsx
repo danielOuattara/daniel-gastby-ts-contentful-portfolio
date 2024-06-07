@@ -1,5 +1,9 @@
-import React from "react";
+import * as React from "react";
 
 export default function Packages() {
-  return <div>Packages</div>;
+  return (
+    <>
+      <h1>Packages experience</h1>
+    </>
+  );
 }
