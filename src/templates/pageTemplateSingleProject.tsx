@@ -60,7 +60,7 @@ type TypePageContext = {
   title: string;
 };
 
-export default function pageTemplateSingleProject({
+export default function PageTemplateSingleProject({
   data,
   pageContext,
 }: PageProps<TypeSingleProjectQuery, TypePageContext>) {
